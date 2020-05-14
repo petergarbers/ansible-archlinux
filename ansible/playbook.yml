@@ -21,12 +21,8 @@
     - { role: windowmanager, tags: ['windowmanager'] }
     # - { role: browsers, tags: ['browsers'] }
     # - { role: calibre, tags: ['calibre'] }
-    # - { role: redshift, tags: ['redshift'] }
-    - { role: spotify, tags: ['spotify'] }
-    # - { role: nextcloud, tags: ['nextcloud'] }
+        - { role: spotify, tags: ['spotify'] }
     # - { role: macspoof, tags: ['macspoof'], when: "system.macspoof == 'enabled'"}
     # - { role: sound, tags : ['sound'] }
     # - { role: mail, tags : ['mail'] }
-    # - { role: photography, tags : ['photography'] }
     # - { role: messengers, tags : ['messengers'] }
-    # - { role: teamspeak3, tags : ['teamspeak3'] }

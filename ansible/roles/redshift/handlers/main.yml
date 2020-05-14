@@ -1,4 +1,0 @@
----
-
-- name: restart geoclue
-  service: name=geoclue state=restarted
