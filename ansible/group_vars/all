@@ -19,8 +19,8 @@ user:
 #                    if you wan't proprietary drivers follow the steps documented in the arch wiki.
 ##
 system:
-    locale: de_CH.UTF-8
-    timezone: Europe/Zurich
+    locale: en_US.UTF-8
+    timezone: America/Denver
     processor: amd
     graphics_card: nvidia
     macspoof: disabled
@@ -30,7 +30,7 @@ system:
 # ========================
 # syslinux and grub are supported
 ##
-bootloader: syslinux
+bootloader: grub
 
 ##
 # Connectivity configuration
@@ -58,20 +58,20 @@ dotfiles:
 ##
 base_packages:
     - base-devel
-    - cronie
+    # - cronie
     - openssh
-    - rkhunter
+    # - rkhunter
     - zsh
     - htop
     - nmap
     - curl
-    - tmux
+    # - tmux
     - git
-    - rsync
+    # - rsync
     - coreutils
     - dateutils
-    - bc
+    # - bc
     - strace
     - lsof
-    - sysstat
-    - tig
+    # - sysstat
+    # - tig
