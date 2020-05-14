@@ -10,7 +10,7 @@
   delay: 2
   notify: rkhunter propupdate
 
-- name: Configure swiss metas atomic clocks
+- name: Configure metas atomic clocks
   copy: src=ntp.conf dest=/etc/
   notify:
     - restart ntpd
@@ -22,7 +22,7 @@
     enabled: yes
   when: install is changed
 
-- name: Sync time with swiss ntp metas atomic clock
+- name: Sync time with ntp metas atomic clock
   shell: ntpdate 0.north-america.pool.ntp.org
   when: install is changed
 

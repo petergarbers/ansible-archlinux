@@ -7,5 +7,5 @@
   notify:
     - regenerate initramfs
 
-- name: Configure plymouth
-  command: "plymouth-set-default-theme -R spinfinity"
+# - name: Configure plymouth
+#   command: "plymouth-set-default-theme -R spinfinity"
