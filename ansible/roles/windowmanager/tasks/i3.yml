@@ -1,5 +1,10 @@
 ---
 
+- name: install i3status-rust
+  yay:
+    name: i3status-rust
+    user: "{{ user.name }}"
+
 - name: install i3 windowmanager and components
   pacman:
     name:
@@ -7,7 +12,7 @@
       - xorg-xinit
       - i3-wm
       - i3lock
-      - i3status-rs
+      #- i3status-rs
       - dmenu
       - feh
       - dunst
@@ -20,7 +25,7 @@
   delay: 2
 
 - name: install i3lock fancy and glitchlock from aur
-  aur:
+  yay:
     name: "{{ item }}"
     user: "{{ user.name }}"
   register: task_result
@@ -33,7 +38,7 @@
 
 # Compton does not work with xsetroot
 - name: install hsetroot from aur
-  aur:
+  yay:
     name: hsetroot
     user: "{{ user.name }}"
 
