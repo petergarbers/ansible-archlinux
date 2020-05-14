@@ -14,7 +14,6 @@
       - i3lock
       #- i3status-rs
       - dmenu
-      - i3-gaps
       - feh
       - dunst
       - rofi
