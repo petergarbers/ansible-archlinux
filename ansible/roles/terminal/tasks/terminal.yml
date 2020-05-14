@@ -30,11 +30,11 @@
   retries: 10
   delay: 2
 
-- name: install tmux terminal multiplexer
-  pacman:
-    name: tmux
-    state: present
-  register: task_result
-  until: task_result is success
-  retries: 10
-  delay: 2
+# - name: install tmux terminal multiplexer
+#   pacman:
+#     name: tmux
+#     state: present
+#   register: task_result
+#   until: task_result is success
+#   retries: 10
+#   delay: 2
