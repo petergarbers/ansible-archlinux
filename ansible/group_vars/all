@@ -3,7 +3,7 @@
 # ==================
 ##
 user:
-    name: aaron
+    name: peter
     group: users
     shell: /bin/zsh
 
