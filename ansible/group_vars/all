@@ -73,5 +73,5 @@ base_packages:
     # - bc
     - strace
     - lsof
-    # - sysstat
-    # - tig
+    - sysstat
+    - tig
