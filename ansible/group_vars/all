@@ -58,16 +58,16 @@ dotfiles:
 ##
 base_packages:
     - base-devel
-    # - cronie
+    - cronie
     - openssh
-    # - rkhunter
+    - rkhunter
     - zsh
     - htop
     - nmap
     - curl
     # - tmux
     - git
-    # - rsync
+    - rsync
     - coreutils
     - dateutils
     # - bc
