@@ -1,7 +1,6 @@
 ---
 
 - name: Install plymouth
-  aur: name=plymouth user={{ user.name }}
   yay:
     name: plymouth
     user: "{{ user.name }}"
