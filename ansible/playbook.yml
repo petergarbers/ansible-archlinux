@@ -8,7 +8,8 @@
   roles:
     # - { role: network, tags: ['network'] }
     # - { role: kernel, tags: ['kernel'] }
-    - { role: base, tags: ['base'] }
+    #- { role: base, tags: ['base'] }
+    - { role: yay, tags: ['yay'] }
     # - { role: firewall, tags: ['firewall'] }
     - { role: grub, tags: ['grub'], when: "bootloader == 'grub'"}
     # - { role: syslinux, tags: ['syslinux'], when: "bootloader == 'syslinux'"}
