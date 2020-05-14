@@ -20,8 +20,7 @@
     - { role: terminal, tags: ['terminal'] }
     - { role: windowmanager, tags: ['windowmanager'] }
     # - { role: browsers, tags: ['browsers'] }
-    # - { role: calibre, tags: ['calibre'] }
-        - { role: spotify, tags: ['spotify'] }
+    - { role: spotify, tags: ['spotify'] }
     # - { role: macspoof, tags: ['macspoof'], when: "system.macspoof == 'enabled'"}
     # - { role: sound, tags : ['sound'] }
     # - { role: mail, tags : ['mail'] }
