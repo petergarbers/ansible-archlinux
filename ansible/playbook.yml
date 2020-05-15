@@ -16,7 +16,9 @@
     - { role: dotfiles, tags: ['dotfiles'] }
     - { role: firejail, tags: ['firejail'] }
     - { role: shell, tags: ['shell'] }
+    - { role: office, tags: ['office'] }
     - { role: editor, tags: ['editor'] }
+    - { role: programming, tags: ['programming'] }
     - { role: terminal, tags: ['terminal'] }
     - { role: windowmanager, tags: ['windowmanager'] }
     - { role: browsers, tags: ['browsers'] }

@@ -1,0 +1,10 @@
+---
+
+- name: install slack
+  yay:
+    name: slack-desktop
+    user: "{{ user.name }}"
+  register: task_result
+  until: task_result is success
+  retries: 10
+  delay: 2

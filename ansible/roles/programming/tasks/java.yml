@@ -1,0 +1,16 @@
+---
+
+- name: install java plugin (asdf)
+  command:
+    cmd: "asdf plugin add java"
+    creates: /home/{{ user.name }}/.asdf/plugins/java
+
+- name: install java 8
+  command:
+    cmd: "asdf install java adopt-openjdk-8u252-b09"
+    creates: /home/{{ user.name }}/.asdf/installs/java/adopt-openjdk-8u252-b09
+
+- name: install java 13
+  command:
+    cmd: "asdf install java adopt-openjdk-13.0.1+9"
+    creates: /home/{{ user.name }}/.asdf/installs/java/adopt-openjdk-13.0.1+9

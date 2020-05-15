@@ -44,3 +44,21 @@
     group: "{{ user.group }}"
     state: touch
   when: omzinstall is changed
+
+- name: Install antigen
+  yay:
+    name: antigen
+    user: "{{ user.name }}"
+  register: task_result
+  until: task_result is success
+  retries: 10
+  delay: 2
+
+- name: Install fasd
+  pacman:
+    name: fasd
+    state: present
+  register: task_result
+  until: task_result is success
+  retries: 10
+  delay: 2

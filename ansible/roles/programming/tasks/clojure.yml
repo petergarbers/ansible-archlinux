@@ -1,0 +1,23 @@
+---
+
+- name: install clojure plugin (asdf)
+  command:
+    cmd: "asdf plugin-add clojure"
+    creates: /home/{{ user.name }}/.asdf/plugins/clojure
+
+- name: install clojure 1.10.0
+  command:
+    cmd: "asdf install clojure 1.10.0"
+    creates: /home/{{ user.name }}/.asdf/installs/clojure/1.10.0
+
+- name: install lein
+  pacman: name=leiningen state=present
+
+- name: install joker (linter)
+  yay:
+    name: joker-bin
+    user: "{{ user.name }}"
+  register: task_result
+  until: task_result is success
+  retries: 10
+  delay: 2
