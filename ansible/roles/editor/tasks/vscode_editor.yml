@@ -1,0 +1,10 @@
+---
+
+- name: install vscode
+  yay:
+    name: visual-studio-code-bin
+    user: "{{ user.name }}"
+  register: task_result
+  until: task_result is success
+  retries: 10
+  delay: 2

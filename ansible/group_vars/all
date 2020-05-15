@@ -75,3 +75,4 @@ base_packages:
     - lsof
     - sysstat
     - tig
+    - the_silver_searcher

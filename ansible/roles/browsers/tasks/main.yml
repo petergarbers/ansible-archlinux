@@ -48,16 +48,36 @@
     - firefox
     - firejail
 
-- name: Install tor-browser-en
-  aur: name=tor-browser-en user={{ user.name }} skip_pgp=yes
+# - name: Install tor-browser-en
+#   aur: name=tor-browser-en user={{ user.name }} skip_pgp=yes
+#   tags:
+#     - tor-browser
+#     - aur
+
+# - name: Jail tor-browser-en
+#   file: src=/usr/bin/firejail
+#         dest=/usr/local/bin/tor-browser-en
+#         state=link
+#   tags:
+#     - tor-browser
+#     - firejail
+
+- name: Install brave-browser-en
+  yay:
+    name: brave-bin
+    user: "{{ user.name }}"
+  register: task_result
+  until: task_result is success
+  retries: 10
+  delay: 2
   tags:
-    - tor-browser
+    - brave
     - aur
 
-- name: Jail tor-browser-en
+- name: Jail brave
   file: src=/usr/bin/firejail
-        dest=/usr/local/bin/tor-browser-en
+        dest=/usr/local/bin/brave
         state=link
   tags:
-    - tor-browser
+    - brave
     - firejail
