@@ -9,7 +9,7 @@
   retries: 10
   delay: 2
 
-- name: Jail telegram-desktop
+- name: Jail signal-desktop
   file: src=/usr/bin/firejail
         dest=/usr/local/bin/signal-desktop
         state=link
