@@ -1,10 +1,5 @@
 ---
 
-- name: install i3status-rust
-  yay:
-    name: i3status-rust
-    user: "{{ user.name }}"
-
 - name: install i3 windowmanager and components
   pacman:
     name:
