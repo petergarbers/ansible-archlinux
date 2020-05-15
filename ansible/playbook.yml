@@ -22,6 +22,6 @@
     - { role: browsers, tags: ['browsers'] }
     # - { role: spotify, tags: ['spotify'] }
     # - { role: macspoof, tags: ['macspoof'], when: "system.macspoof == 'enabled'"}
-    # - { role: sound, tags : ['sound'] }
+    - { role: sound, tags : ['sound'] }
     # - { role: mail, tags : ['mail'] }
     - { role: messengers, tags : ['messengers'] }
