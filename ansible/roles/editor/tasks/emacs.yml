@@ -1,0 +1,12 @@
+---
+
+- name: Clone spacemacs dotfiles
+  git:
+    repo: https://github.com/syl20bnr/spacemacs.git
+    dest: /home/{{ user.name }}/.emacs.d
+    version: master
+    update: yes
+    # notify: makepkg -si
+
+- name: install emacs
+  pacman: name=emacs state=present
