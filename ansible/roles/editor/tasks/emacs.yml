@@ -6,6 +6,8 @@
     dest: /home/{{ user.name }}/.emacs.d
     version: master
     update: yes
+  become: yes
+  become_user: "{{ user.name }}"
     # notify: makepkg -si
 
 - name: install emacs
