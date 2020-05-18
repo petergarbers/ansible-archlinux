@@ -1,3 +1,4 @@
 {
-    "data-root": "/home/peter/docker-images"
+    "data-root": "/home/peter/docker-images",
+    "ip-forward": true
 }
