@@ -6,7 +6,7 @@
   become: True
 
   roles:
-    # - { role: network, tags: ['network'] }
+    - { role: network, tags: ['network'] }
     - { role: kernel, tags: ['kernel'] }
     - { role: base, tags: ['base'] }
     - { role: yay, tags: ['yay'] }
@@ -22,7 +22,7 @@
     - { role: terminal, tags: ['terminal'] }
     - { role: windowmanager, tags: ['windowmanager'] }
     - { role: browsers, tags: ['browsers'] }
-    # - { role: spotify, tags: ['spotify'] }
+    - { role: spotify, tags: ['spotify'] }
     # - { role: macspoof, tags: ['macspoof'], when: "system.macspoof == 'enabled'"}
     - { role: sound, tags : ['sound'] }
     # - { role: mail, tags : ['mail'] }
