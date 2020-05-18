@@ -17,7 +17,7 @@
   delay: 2
 
 - name: install aur fonts using pacaur
-  aur:
+  yay:
     name: "{{ item }}"
     user: "{{ user.name }}"
   with_items:
