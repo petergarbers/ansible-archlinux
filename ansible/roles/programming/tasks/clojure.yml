@@ -13,6 +13,9 @@
 - name: install lein
   pacman: name=leiningen state=present
 
+- name: install rlwrap
+  pacman: name=rlwrap state=present
+
 - name: install joker (linter)
   yay:
     name: joker-bin
