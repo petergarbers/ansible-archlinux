@@ -1,0 +1,7 @@
+---
+
+- name: sassc
+  pacman: name=sassc state=present
+
+- name: wkhtmltopdf
+  pacman: name=wkhtmltopdf state=present
