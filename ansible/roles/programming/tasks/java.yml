@@ -14,3 +14,6 @@
   command:
     cmd: "asdf install java adopt-openjdk-13.0.1+9"
     creates: /home/{{ user.name }}/.asdf/installs/java/adopt-openjdk-13.0.1+9
+
+- name: install maven
+  pacman: name=maven state=present

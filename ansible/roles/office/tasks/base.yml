@@ -18,6 +18,13 @@
   retries: 10
   delay: 2
 
+- name: Jail zoom
+  file: src=/usr/bin/firejail
+        dest=/usr/local/bin/zoom
+        state=link
+  tags:
+    - firejail
+
 - name: install notion-app
   yay:
     name: notion-app
@@ -26,3 +33,10 @@
   until: task_result is success
   retries: 10
   delay: 2
+
+- name: Jail notion-app
+  file: src=/usr/bin/firejail
+        dest=/usr/local/bin/notion-app
+        state=link
+  tags:
+    - firejail

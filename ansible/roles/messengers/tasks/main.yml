@@ -15,3 +15,13 @@
         state=link
   tags:
     - firejail
+
+- name: Install discord
+  pacman: name=discord state=present
+
+- name: Jail discord
+  file: src=/usr/bin/firejail
+        dest=/usr/local/bin/discord
+        state=link
+  tags:
+    - firejail
