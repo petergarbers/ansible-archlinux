@@ -13,3 +13,6 @@
   command:
     cmd: "keybase config set mountdir /home/{{ user.name }}/keybase"
     creates: /home/{{ user.name }}/keybase
+
+- name: install gnome-screenshot
+  pacman: name=gnome-screenshot state=present
