@@ -51,10 +51,10 @@
     - firejail
 
 # - name: Install tor-browser-en
-#   aur: name=tor-browser-en user={{ user.name }} skip_pgp=yes
+#   yay: name=tor-browser-en user={{ user.name }} skip_pgp=yes
 #   tags:
 #     - tor-browser
-#     - aur
+#     - yay
 
 # - name: Jail tor-browser-en
 #   file: src=/usr/bin/firejail
@@ -74,7 +74,7 @@
   delay: 2
   tags:
     - ungoogled-chromium
-    - aur
+    - yay
 
 # - name: Jail brave
 #   file: src=/usr/bin/firejail

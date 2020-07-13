@@ -16,7 +16,7 @@
   retries: 10
   delay: 2
 
-- name: install aur fonts using pacaur
+- name: install aur fonts using yay
   yay:
     name: "{{ item }}"
     user: "{{ user.name }}"
