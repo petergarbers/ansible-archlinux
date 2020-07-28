@@ -1,7 +1,7 @@
 ---
 
 - name: install vscode
-  yay:
+  aur:
     name: visual-studio-code-bin
     user: "{{ user.name }}"
   register: task_result

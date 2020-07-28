@@ -1,7 +1,7 @@
 ---
 
 - name: Install signal-desktop
-  yay:
+  aur:
     name: signal-desktop
     user: "{{ user.name }}"
   register: task_result

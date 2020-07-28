@@ -4,3 +4,4 @@
 - import_tasks: fonts.yml
 - import_tasks: i3.yml
 - import_tasks: tools.yml
+- import_tasks: filemanager.yml

@@ -1,11 +1,2 @@
 ---
 
-- name: Install plymouth
-  yay:
-    name: plymouth
-    user: "{{ user.name }}"
-  notify:
-    - regenerate initramfs
-
-# - name: Configure plymouth
-#   command: "plymouth-set-default-theme -R spinfinity"

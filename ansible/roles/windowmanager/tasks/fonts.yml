@@ -10,18 +10,18 @@
     - ttf-droid
     - noto-fonts-emoji
     - fontconfig
-    - xorg-font-utils
+    #- xorg-font-utils
   register: task_result
   until: task_result is success
   retries: 10
   delay: 2
 
 - name: install aur fonts using yay
-  yay:
+  aur:
     name: "{{ item }}"
     user: "{{ user.name }}"
   with_items:
-    - powerline-fonts-git
+    # - powerline-fonts-git
     - oh-my-zsh-git
   register: task_result
   until: task_result is success

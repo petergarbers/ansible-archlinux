@@ -2,7 +2,7 @@
 
 
 - name: install asdf
-  yay:
+  aur:
     name: asdf-vm
     user: "{{ user.name }}"
   register: task_result

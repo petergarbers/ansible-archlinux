@@ -14,6 +14,8 @@
     - pulseaudio-alsa
     - pavucontrol
 
+# todo: create teh folder below
+
 - name: Deploy HiFi pulse audio daemon configuration
   template:
     src: daemon.conf.j2

@@ -17,7 +17,7 @@
   pacman: name=rlwrap state=present
 
 - name: install joker (linter)
-  yay:
+  aur:
     name: joker-bin
     user: "{{ user.name }}"
   register: task_result

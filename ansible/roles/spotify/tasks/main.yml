@@ -1,7 +1,7 @@
 ---
 
 - name: Install spotify from aur
-  yay: name=spotify user={{ user.name }}
+  aur: name=spotify user={{ user.name }}
 
 - name: Jail spotify
   file: src=/usr/bin/firejail

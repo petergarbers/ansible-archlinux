@@ -8,7 +8,7 @@
       - i3-gaps
       - i3lock
       #- i3status
-      - i3status-rs
+      - i3status-rust
       - dmenu
       - feh
       - dunst
@@ -21,7 +21,7 @@
   delay: 2
 
 - name: install i3lock fancy and glitchlock from aur
-  yay:
+  aur:
     name: "{{ item }}"
     user: "{{ user.name }}"
   register: task_result
@@ -34,7 +34,7 @@
 
 # Compton does not work with xsetroot
 - name: install hsetroot from aur
-  yay:
+  aur:
     name: hsetroot
     user: "{{ user.name }}"
 

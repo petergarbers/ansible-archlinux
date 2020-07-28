@@ -1,7 +1,7 @@
 ---
 
 - name: install keybase
-  yay:
+  aur:
     name: keybase-bin
     user: "{{ user.name }}"
   register: task_result
@@ -9,10 +9,13 @@
   retries: 10
   delay: 2
 
-- name: set keybase directory
-  command:
-    cmd: "keybase config set mountdir /home/{{ user.name }}/keybase"
-    creates: /home/{{ user.name }}/keybase
+# - name: set keybase directory
+#   command:
+#     cmd: "keybase config set mountdir /home/{{ user.name }}/keybase"
+#     creates: /home/{{ user.name }}/keybase
 
 - name: install gnome-screenshot
   pacman: name=gnome-screenshot state=present
+
+- name: install vlc
+  pacman: name=vlc state=present

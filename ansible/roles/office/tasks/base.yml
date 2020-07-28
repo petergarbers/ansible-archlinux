@@ -1,38 +1,45 @@
 ---
 
 - name: install slack
-  yay:
+  aur:
     name: slack-desktop
     user: "{{ user.name }}"
   register: task_result
   until: task_result is success
   retries: 10
   delay: 2
-
-- name: install zoom
-  yay:
-    name: zoom
-    user: "{{ user.name }}"
-  register: task_result
-  until: task_result is success
-  retries: 10
-  delay: 2
-
-- name: Jail zoom
-  file: src=/usr/bin/firejail
-        dest=/usr/local/bin/zoom
-        state=link
   tags:
-    - firejail
+    - aur
+
+# - name: install zoom
+#   aur:
+#     name: zoom
+#     user: "{{ user.name }}"
+#   register: task_result
+#   until: task_result is success
+#   retries: 10
+#   delay: 2
+#   tags:
+#     - aur
+
+
+# - name: Jail zoom
+#   file: src=/usr/bin/firejail
+#         dest=/usr/local/bin/zoom
+#         state=link
+#   tags:
+#     - firejail
 
 - name: install notion-app
-  yay:
+  aur:
     name: notion-app
     user: "{{ user.name }}"
   register: task_result
   until: task_result is success
   retries: 10
   delay: 2
+  tags:
+    - aur
 
 - name: Jail notion-app
   file: src=/usr/bin/firejail

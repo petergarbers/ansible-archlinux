@@ -9,3 +9,7 @@
   command:
     cmd: "asdf install rust stable"
     creates: /home/{{ user.name }}/.asdf/installs/rust/stable
+
+# - name: install rust-src
+#   command:
+#     cmd: "rustup component add rust-src"
