@@ -1,0 +1,17 @@
+---
+
+- name: httpie
+  pacman: name=httpie state=present
+
+
+# - name: install balsomiq
+#   aur:
+#     name: balsamiqmockups
+#     user: "{{ user.name }}"
+#   register: task_result
+#   until: task_result is success
+#   retries: 10
+#   delay: 2
+#   tags:
+#     - balsomiq
+#     - aur

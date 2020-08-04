@@ -1,0 +1,7 @@
+---
+
+- name: install minikube
+  pacman: name=minikube state=present
+
+- name: install kubectl
+  pacman: name=kubectl state=present

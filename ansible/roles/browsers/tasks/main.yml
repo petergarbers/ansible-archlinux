@@ -48,19 +48,19 @@
     - firefox
     - firejail
 
-# - name: Install tor-browser-en
-#   aur: name=tor-browser-en user={{ user.name }} skip_pgp=yes
-#   tags:
-#     - tor-browser
-#     - yay
+- name: Install tor-browser-en
+  aur: name=tor-browser user={{ user.name }} skip_pgp=yes
+  tags:
+    - tor-browser
+    - aur
 
-# - name: Jail tor-browser-en
-#   file: src=/usr/bin/firejail
-#         dest=/usr/local/bin/tor-browser-en
-#         state=link
-#   tags:
-#     - tor-browser
-#     - firejail
+- name: Jail tor-browser-en
+  file: src=/usr/bin/firejail
+        dest=/usr/local/bin/tor-browser-en
+        state=link
+  tags:
+    - tor-browser
+    - firejail
 
 - name: Install ungoogled-chromium
   aur:
