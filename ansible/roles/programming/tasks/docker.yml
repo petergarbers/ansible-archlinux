@@ -3,19 +3,19 @@
 - name: install docker
   pacman: name=docker state=present
 
-- name: Enable docker service
-  service: name=docker state=started enabled=yes
+# - name: Enable docker service
+#   service: name=docker state=started enabled=yes
 
 - name: install docker-compose manager
   pacman: name=docker-compose state=present
 
-- name: add peter to docker group
-  command: "usermod -aG docker peter"
+# - name: add peter to docker group
+#   command: "usermod -aG docker peter"
 
 - name: store docker images in /home where there is more space
   copy:
     src: docker-daemon.json
     dest: /etc/docker/daemon.json
 
-- name: restart docker
-  service: name=docker state=restarted
+# - name: restart docker
+#   service: name=docker state=restarted
