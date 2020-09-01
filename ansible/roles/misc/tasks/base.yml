@@ -19,3 +19,6 @@
 
 - name: install vlc
   pacman: name=vlc state=present
+
+- name: install peek (screen gif recorder)
+  pacman: name=peek state=present
