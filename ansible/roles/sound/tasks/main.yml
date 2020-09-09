@@ -12,7 +12,15 @@
     - alsa-utils
     - pulseaudio
     - pulseaudio-alsa
+    - pulseaudio-bluetooth
+    - bluez-utils
     - pavucontrol
+
+# - name: Enable docker service
+#   service: name=docker state=started enabled=yes
+
+- name: Enable bluetooth service
+  service: name=bluetooth state=started enabled=yes
 
 # todo: create teh folder below
 
