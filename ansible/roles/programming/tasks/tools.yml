@@ -3,6 +3,9 @@
 - name: httpie
   pacman: name=httpie state=present
 
+- name: tig
+  pacman: name=tig state=present
+
 
 # - name: install balsomiq
 #   aur:
