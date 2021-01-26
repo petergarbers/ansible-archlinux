@@ -9,10 +9,10 @@
   retries: 10
   delay: 2
 
-# - name: set keybase directory
-#   command:
-#     cmd: "keybase config set mountdir /home/{{ user.name }}/keybase"
-#     creates: /home/{{ user.name }}/keybase
+- name: set keybase directory
+  command:
+    cmd: "keybase config set mountdir /home/{{ user.name }}/keybase"
+    creates: /home/{{ user.name }}/keybase
 
 - name: install gnome-screenshot
   pacman: name=gnome-screenshot state=present
@@ -20,8 +20,24 @@
 - name: install filezilla
   pacman: name=filezilla state=present
 
+- name: Jail filezilla
+  file: src=/usr/bin/firejail
+        dest=/usr/local/bin/filezilla
+        state=link
+  tags:
+    - firejail
+
+
 - name: install vlc
   pacman: name=vlc state=present
+
+- name: Jail vlc
+  file: src=/usr/bin/firejail
+        dest=/usr/local/bin/vlc
+        state=link
+  tags:
+    - firejail
+
 
 - name: install unzip
   pacman: name=unzip state=present

@@ -17,7 +17,7 @@
   delay: 2
 
 - name: Jail path-of-building
-  file: src=/usr/bin/PathOfBuildingCommunity
+  file: src=/usr/bin/firejail
         dest=/usr/local/bin/PathOfBuildingCommunity
         state=link
   tags:

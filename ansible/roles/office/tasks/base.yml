@@ -12,7 +12,7 @@
     - aur
 
 - name: Jail slack
-  file: src=/usr/bin/slack
+  file: src=/usr/bin/firejail
         dest=/usr/local/bin/slack
         state=link
   tags:
