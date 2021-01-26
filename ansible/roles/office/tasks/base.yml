@@ -11,6 +11,13 @@
   tags:
     - aur
 
+- name: Jail slack
+  file: src=/usr/bin/slack
+        dest=/usr/local/bin/slack
+        state=link
+  tags:
+    - firejail
+
 # - name: install zoom
 #   aur:
 #     name: zoom
