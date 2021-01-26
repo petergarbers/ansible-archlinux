@@ -20,6 +20,7 @@
     - { role: office, tags: ['office'] }
     - { role: editor, tags: ['editor'] }
     - { role: programming, tags: ['programming'] }
+    - { role: gaming, tags: ['gaming'] }
     - { role: terminal, tags: ['terminal'] }
     - { role: windowmanager, tags: ['windowmanager'] }
     - { role: browsers, tags: ['browsers'] }

@@ -17,8 +17,14 @@
 - name: install gnome-screenshot
   pacman: name=gnome-screenshot state=present
 
+- name: install filezilla
+  pacman: name=filezilla state=present
+
 - name: install vlc
   pacman: name=vlc state=present
+
+- name: install unzip
+  pacman: name=unzip state=present
 
 - name: install peek (screen gif recorder)
   pacman: name=peek state=present
