@@ -54,3 +54,14 @@
         state=link
   tags:
     - firejail
+
+
+- name: install libreoffice
+  pacman: name=libreoffice-fresh state=present
+
+- name: Jail libreoffice
+  file: src=/usr/bin/libreoffice
+        dest=/usr/local/bin/libreoffice
+        state=link
+  tags:
+    - firejail
