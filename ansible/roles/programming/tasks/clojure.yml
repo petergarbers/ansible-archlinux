@@ -7,7 +7,7 @@
 
 - name: install clojure 1.10.0
   command:
-    cmd: "asdf install clojure 1.10.0"
+    cmd: "asdf install clojure 1.10.3"
     creates: /home/{{ user.name }}/.asdf/installs/clojure/1.10.0
 
 - name: install lein

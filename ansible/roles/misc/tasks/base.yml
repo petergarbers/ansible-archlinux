@@ -38,6 +38,9 @@
   tags:
     - firejail
 
+- name: install prusa-slicer
+  pacman: name=prusa-slicer state=present
+
 - name: install usbutils
   pacman: name=usbutils state=present
 
