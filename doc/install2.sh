@@ -2,7 +2,7 @@
 
 echo "pacstrapping"
 
-pacstrap /mnt base base-devel grub-efi-x86_64 efibootmgr lvm2 linux linux-firmware vim git sudo dialog wpa_supplicant iwd
+pacstrap /mnt base base-devel grub-efi-x86_64 efibootmgr lvm2 linux linux-firmware vim git sudo dialog wpa_supplicant iwd openssh
 
 echo "creating fstab"
 genfstab -pU /mnt >> /mnt/etc/fstab
