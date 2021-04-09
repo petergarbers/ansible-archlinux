@@ -2,7 +2,7 @@
 
 echo GRUB_ENABLE_CRYPTODISK=y >> /etc/default/grub
 
-echo GRUB_CMDLINE_LINUX="cryptdevice=UUID=$(blkid /dev/sda3 -s UUID -o value):vg0 root=/dev/mapper/vg0-root resume=/dev/mapper/vg0-swap" >> /etc/default/grub
+echo GRUB_CMDLINE_LINUX="cryptdevice=UUID=$(blkid /dev/nvme0n1p3 -s UUID -o value):vg0 root=/dev/mapper/vg0-root resume=/dev/mapper/vg0-swap" >> /etc/default/grub
 
 echo "install ucode"
 pacman -S intel-ucode
