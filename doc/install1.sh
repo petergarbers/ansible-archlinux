@@ -25,6 +25,7 @@ echo "mounting volumes"
 mount /dev/mapper/vg0-root /mnt
 mkdir /mnt/home
 mount /dev/mapper/vg0-home /mnt/home
+mkdir /mnt/boot
 mount /dev/nvme0n1p2 /mnt/boot
 mkdir /mnt/boot/efi
 mount /dev/nvme0n1p1 /mnt/boot/efi
