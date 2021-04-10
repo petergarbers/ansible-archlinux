@@ -14,17 +14,18 @@
     # - { role: firewall, tags: ['firewall'] }
     - { role: grub, tags: ['grub'], when: "bootloader == 'grub'"}
     # - { role: syslinux, tags: ['syslinux'], when: "bootloader == 'syslinux'"}
+    - { role: laptop, tags: ['laptop'], when: "machine == 'laptop'"}
     - { role: dotfiles, tags: ['dotfiles'] }
-    - { role: firejail, tags: ['firejail'] }
+    - { role: firejail, tags: ['firejail', 'super'] }
     - { role: shell, tags: ['shell'] }
     - { role: office, tags: ['office'] }
     - { role: editor, tags: ['editor'] }
     - { role: programming, tags: ['programming'] }
-    - { role: games, tags: ['games'] }
+      #    - { role: games, tags: ['games'] }
     - { role: terminal, tags: ['terminal'] }
     - { role: windowmanager, tags: ['windowmanager'] }
     - { role: browsers, tags: ['browsers'] }
-    - { role: spotify, tags: ['spotify'] }
+      #    - { role: spotify, tags: ['spotify'] }
     # - { role: macspoof, tags: ['macspoof'], when: "system.macspoof == 'enabled'"}
     - { role: sound, tags : ['sound'] }
     - { role: mail, tags : ['mail'] }

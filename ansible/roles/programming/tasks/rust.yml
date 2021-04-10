@@ -1,14 +1,14 @@
 ---
 
-- name: install rust plugin (asdf)
-  command:
-    cmd: "asdf plugin-add rust"
-    creates: /home/{{ user.name }}/.asdf/plugins/rust
+#- name: install rust plugin (asdf)
+#  command:
+#    cmd: "asdf plugin-add rust"
+#    creates: /home/{{ user.name }}/.asdf/plugins/rust
 
-- name: install rust stable
-  command:
-    cmd: "asdf install rust stable"
-    creates: /home/{{ user.name }}/.asdf/installs/rust/stable
+#- name: install rust stable
+#  command:
+#    cmd: "asdf install rust stable"
+#    creates: /home/{{ user.name }}/.asdf/installs/rust/stable
 
 # - name: install rust-src
 #   command:

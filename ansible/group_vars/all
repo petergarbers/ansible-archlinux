@@ -33,6 +33,12 @@ system:
 bootloader: grub
 
 ##
+# Machine
+# =========================
+##
+machine: laptop
+
+##
 # Connectivity configuration
 # ==========================
 ##

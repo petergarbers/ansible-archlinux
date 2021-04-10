@@ -20,12 +20,12 @@
 - name: install filezilla
   pacman: name=filezilla state=present
 
-- name: Jail filezilla
-  file: src=/usr/bin/firejail
-        dest=/usr/local/bin/filezilla
-        state=link
-  tags:
-    - firejail
+    #- name: Jail filezilla
+    #  file: src=/usr/bin/firejail
+    #    dest=/usr/local/bin/filezilla
+    #    state=link
+    #tags:
+    #- firejail
 
 
 - name: install vlc
