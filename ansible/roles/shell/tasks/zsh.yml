@@ -34,6 +34,20 @@
     dest: "/home/{{ user.name }}/.zshenv"
   when: machine == "frustration"
 
+- name: Push zprofile (frustration)
+  copy:
+    src: "frustration_zprofile"
+    dest: "/home/{{ user.name }}/.zprofile"
+  when: machine == "frustration"
+
+
+- name: Push zprofile (doom)
+  copy:
+    src: "doom_zprofile"
+    dest: "/home/{{ user.name }}/.zprofile"
+  when: machine == "doom"
+
+
 - name: Push zshenv (doom)
   copy:
     src: "doom_zshenv"
