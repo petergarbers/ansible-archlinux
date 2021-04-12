@@ -44,3 +44,15 @@
     state: directory
     owner: "{{ user.name }}"
     group: "{{ user.group }}"
+
+- name: Push i3status.toml (frustration)
+  copy:
+    src: "frustration_i3status_config"
+    dest: "/home/{{ user.name }}/.i3/i3status.toml"
+  when: machine == "frustration"
+
+- name: Push i3status.toml (doom)
+  copy:
+    src: "doom_i3status_config"
+    dest: "/home/{{ user.name }}/.i3/i3status.toml"
+  when: machine == "doom"
