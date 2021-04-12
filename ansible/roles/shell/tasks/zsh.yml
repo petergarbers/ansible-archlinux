@@ -28,11 +28,17 @@
     dest: "/usr/share/oh-my-zsh/themes/agnoster.zsh-theme"
   when: omzinstall is changed
 
-- name: Push zshenv
+- name: Push zshenv (frustration)
   copy:
     src: "frustration_zshenv"
     dest: "/home/{{ user.name }}/.zshenv"
   when: machine == "frustration"
+
+- name: Push zshenv (doom)
+  copy:
+    src: "doom_zshenv"
+    dest: "/home/{{ user.name }}/.zshenv"
+  when: machine == "doom"
 
 - name: Ensure the cache folder with oh-my-zsh subfolder is present
   file:
