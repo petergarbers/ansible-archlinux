@@ -1,0 +1,10 @@
+---
+
+- name: Install libinput-gestures
+  aur: name=libinput-gestures user={{ user.name }}
+
+- name: Allow touchpad to click with touch
+  template:
+    src: 30-touchpad.j2
+    dest: "/etc/X11/xorg.conf.d/30-touchpad.conf"
+    become: yes

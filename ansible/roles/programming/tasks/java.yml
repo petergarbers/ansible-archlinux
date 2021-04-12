@@ -5,6 +5,8 @@
     cmd: "asdf plugin add java"
     creates: /home/{{ user.name }}/.asdf/plugins/java
 
+
+
 - name: install java 8
   command:
     cmd: "asdf install java adopt-openjdk-8u252-b09"

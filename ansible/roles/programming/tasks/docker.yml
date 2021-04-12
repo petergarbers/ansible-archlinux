@@ -12,10 +12,10 @@
 # - name: add peter to docker group
 #   command: "usermod -aG docker peter"
 
-- name: store docker images in /home where there is more space
-  copy:
-    src: docker-daemon.json
-    dest: /etc/docker/daemon.json
+    #- name: store docker images in /home where there is more space
+    #  copy:
+    #    src: docker-daemon.json
+    #dest: /etc/docker/daemon.json
 
 # - name: restart docker
 #   service: name=docker state=restarted

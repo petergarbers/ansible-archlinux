@@ -74,10 +74,10 @@
 #     - ungoogled-chromium
 #     - aur
 
-- name: Jail chromium
-  file: src=/usr/bin/firejail
-        dest=/usr/local/bin/chromium
-        state=link
-  tags:
-    - ungoogled-chromium
-    - firejail
+      #- name: Jail chromium
+      #  file: src=/usr/bin/firejail
+      #        dest=/usr/local/bin/chromium
+      #  state=link
+      #  tags:
+      #    - ungoogled-chromium
+      #    - firejail

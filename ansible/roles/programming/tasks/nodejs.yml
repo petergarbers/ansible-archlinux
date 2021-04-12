@@ -1,15 +1,15 @@
 ---
 
-- name: install nodejs plugin (asdf)
-  command:
-    cmd: "asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git"
-    creates: /home/{{ user.name }}/.asdf/plugins/nodejs
+#- name: install nodejs plugin (asdf)
+#  command:
+#    cmd: "asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git"
+#    creates: /home/{{ user.name }}/.asdf/plugins/nodejs
 
-- name: Install nodejs pgp keys
-  command:
-    cmd: "bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'"
+#- name: Install nodejs pgp keys
+#  command:
+#    cmd: "bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'"
 
-- name: install nodejs 14.7.0
-  command:
-    cmd: "asdf install nodejs 14.7.0"
-    creates: /home/{{ user.name }}/.asdf/installs/nodejs/14.7.0
+#- name: install nodejs 14.7.0
+#  command:
+#    cmd: "asdf install nodejs 14.7.0"
+#    creates: /home/{{ user.name }}/.asdf/installs/nodejs/14.7.0
