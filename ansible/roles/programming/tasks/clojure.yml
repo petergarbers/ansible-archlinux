@@ -1,14 +1,14 @@
 ---
 
-#- name: install clojure plugin (asdf)
-#  command:
-#    cmd: "asdf plugin-add clojure"
-#    creates: /home/{{ user.name }}/.asdf/plugins/clojure
+- name: install clojure plugin (asdf)
+  command:
+    cmd: "asdf plugin-add clojure"
+    creates: /home/{{ user.name }}/.asdf/plugins/clojure
 
-#- name: install clojure 1.10.0
-#  command:
-#    cmd: "asdf install clojure 1.10.3"
-#    creates: /home/{{ user.name }}/.asdf/installs/clojure/1.10.0
+- name: install clojure 1.10.0
+  command:
+    cmd: "asdf install clojure 1.10.3"
+    creates: /home/{{ user.name }}/.asdf/installs/clojure/1.10.0
 
 - name: install lein
   pacman: name=leiningen state=present
