@@ -33,6 +33,13 @@ system:
 bootloader: grub
 
 ##
+# machine settings
+# =======================
+# set the name of the machine you're using
+##
+machine: frustration
+
+##
 # Connectivity configuration
 # ==========================
 ##
