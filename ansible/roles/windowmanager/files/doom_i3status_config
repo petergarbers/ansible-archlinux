@@ -33,12 +33,12 @@
 
 [[block]]
   block = "net"
-  device = "enp6s0"
+  device = "wlan0"
   ssid = false
   ip = true
-  speed_up = false
+  speed_up = true
   graph_up = false
-  speed_down = false
+  speed_down = true
   graph_down = false
   interval = 1
 

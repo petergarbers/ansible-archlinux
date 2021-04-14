@@ -37,7 +37,7 @@ bootloader: grub
 # =======================
 # set the name of the machine you're using
 ##
-machine: frustration
+machine: doom
 
 ##
 # Connectivity configuration
