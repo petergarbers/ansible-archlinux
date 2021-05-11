@@ -15,6 +15,18 @@
   interval = 10
 
 [[block]]
+  block = "pacman"
+  interval = 600
+
+[[block]]
+  block = "disk_space"
+  path = "/home"
+  alias = "/home"
+  info_type = "free"
+  format = "{icon} {free}"
+  unit = "GB"
+
+[[block]]
   block = "disk_space"
   path = "/"
   info_type = "free"
@@ -22,35 +34,8 @@
   unit = "GB"
 
 [[block]]
-  block = "disk_space"
-  path = "/media/Data1"
-  info_type = "available"
-  format = "{icon} {free}"
-  unit = "TB"
-
-[[block]]
-  block = "disk_space"
-  path = "/media/Data2"
-  info_type = "available"
-  format = "{icon} {free}"
-  unit = "TB"
-
-[[block]]
-  block = "disk_space"
-  path = "/media/ssdcache"
-  info_type = "free"
-  format = "{icon} {free}"
-  unit = "GB"
-
-[[block]]
   block = "net"
-  device = "enp7s0"
-  format = "{ip}"
-  interval = 1
-
-[[block]]
-  block = "net"
-  device = "wlp5s0"
+  device = "wlan0"
   format = "{ip}"
   interval = 1
 
@@ -71,12 +56,16 @@
   block = "temperature"
   collapsed = false
   interval = 10
-  format = "{min} min, {max} max, {average} avg"
+  format = "{average}°C"
   chip = "*-isa-*"
-  inputs = ["CPUTIN", "SYSTIN"]
+
+[[block]]
+  block = "battery"
+  interval = 10
+  format = "{percentage}% {time}"
 
 [[block]]
   block = "time"
   format = "%A %v %T"
   timezone = "America/Denver"
-  interval = 1
+  interval = 1%
