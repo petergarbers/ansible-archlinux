@@ -65,3 +65,24 @@
         state=link
   tags:
     - firejail
+
+- name: install balsamiq
+  aur:
+    name: balsamiqmockups
+    user: "{{ user.name }}"
+  register: task_result
+  until: task_result is success
+  retries: 10
+  delay: 2
+  tags:
+    - aur
+
+- name: install zip
+  pacman: name=zip state=present
+
+- name: Jail zip
+  file: src=/usr/bin/zip
+        dest=/usr/local/bin/zip
+        state=link
+  tags:
+    - firejail
