@@ -10,6 +10,7 @@
     - ttf-droid
     - noto-fonts-emoji
     - fontconfig
+    - ttf-font-awesome
     #- xorg-font-utils
   register: task_result
   until: task_result is success
