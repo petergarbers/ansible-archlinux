@@ -17,6 +17,7 @@
 [[block]]
   block = "pacman"
   interval = 600
+
 [[block]]
   block = "disk_space"
   path = "/"

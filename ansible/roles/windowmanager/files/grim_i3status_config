@@ -2,10 +2,9 @@
 
 [theme]
   name = "gruvbox-dark"
-  #name = "slick"
 
 [icons]
-  name = "awesome"
+  name = "awesome5"
 
 [icons.overrides]
   time = "  "
@@ -33,13 +32,8 @@
 
 [[block]]
   block = "net"
-  device = "enp6s0"
-  ssid = false
-  ip = true
-  speed_up = false
-  graph_up = false
-  speed_down = false
-  graph_down = false
+  device = "enp9s0"
+  format = "{ip}"
   interval = 1
 
 [[block]]
@@ -50,6 +44,9 @@
 [[block]]
   block = "sound"
 
+[[block]]
+  block = "music"
+  buttons = ["play", "next"]
 
 [[block]]
   block = "temperature"

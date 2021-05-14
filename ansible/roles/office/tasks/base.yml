@@ -37,23 +37,23 @@
 #   tags:
 #     - firejail
 
-- name: install notion-app
-  aur:
-    name: notion-app
-    user: "{{ user.name }}"
-  register: task_result
-  until: task_result is success
-  retries: 10
-  delay: 2
-  tags:
-    - aur
+      #- name: install notion-app
+      #  aur:
+      #    name: notion-app
+      #    user: "{{ user.name }}"
+      #  register: task_result
+      #  until: task_result is success
+      #  retries: 10
+      #  delay: 2
+      #  tags:
+      #    - aur
 
-- name: Jail notion-app
-  file: src=/usr/bin/firejail
-        dest=/usr/local/bin/notion-app
-        state=link
-  tags:
-    - firejail
+      #- name: Jail notion-app
+      #  file: src=/usr/bin/firejail
+      #        dest=/usr/local/bin/notion-app
+      #  state=link
+      #  tags:
+      #    - firejail
 
 
 - name: install libreoffice
@@ -66,16 +66,16 @@
   tags:
     - firejail
 
-- name: install balsamiq
-  aur:
-    name: balsamiqmockups
-    user: "{{ user.name }}"
-  register: task_result
-  until: task_result is success
-  retries: 10
-  delay: 2
-  tags:
-    - aur
+      #- name: install balsamiq
+      #  aur:
+      #    name: balsamiqmockups
+      #    user: "{{ user.name }}"
+      #  register: task_result
+      #  until: task_result is success
+      #  retries: 10
+      #  delay: 2
+      #  tags:
+      #    - aur
 
 - name: install zip
   pacman: name=zip state=present

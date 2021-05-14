@@ -62,22 +62,45 @@
     - tor-browser
     - firejail
 
-# - name: Install ungoogled-chromium
-#   aur:
-#     name: ungoogled-chromium
-#     user: "{{ user.name }}"
-#   register: task_result
-#   until: task_result is success
-#   retries: 10
-#   delay: 2
-#   tags:
-#     - ungoogled-chromium
-#     - aur
+- name: Install google-chrome-dev (canary)
+  aur:
+    name: google-chrome-dev
+    user: "{{ user.name }}"
+  register: task_result
+  until: task_result is success
+  retries: 10
+  delay: 2
+  tags:
+    - google-chrome-dev
+    - canary
+    - aur
 
-      #- name: Jail chromium
-      #  file: src=/usr/bin/firejail
-      #        dest=/usr/local/bin/chromium
-      #  state=link
-      #  tags:
-      #    - ungoogled-chromium
-      #    - firejail
+- name: Jail google-chrome-dev (canary)
+  file: src=/usr/bin/firejail
+        dest=/usr/local/bin/google-chrome-dev
+        state=link
+  tags:
+    - google-chrome-dev
+    - canary
+    - firejail
+
+
+- name: Install ungoogled-chromium
+  aur:
+    name: ungoogled-chromium
+    user: "{{ user.name }}"
+  register: task_result
+  until: task_result is success
+  retries: 10
+  delay: 2
+  tags:
+    - ungoogled-chromium
+    - aur
+
+- name: Jail chromium
+  file: src=/usr/bin/firejail
+        dest=/usr/local/bin/chromium
+        state=link
+  tags:
+    - ungoogled-chromium
+    - firejail

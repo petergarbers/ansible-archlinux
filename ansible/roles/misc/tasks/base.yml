@@ -8,6 +8,8 @@
   until: task_result is success
   retries: 10
   delay: 2
+  tags:
+    - keybase
 
 # - name: set keybase directory
 #   command:
@@ -19,27 +21,44 @@
 
 - name: install filezilla
   pacman: name=filezilla state=present
+  tags:
+    - filezilla
 
-    #- name: Jail filezilla
-    #  file: src=/usr/bin/firejail
-    #    dest=/usr/local/bin/filezilla
-    #    state=link
-    #tags:
-    #- firejail
+- name: Jail filezilla
+  file: src=/usr/bin/firejail
+        dest=/usr/local/bin/filezilla
+        state=link
+  tags:
+    - filezilla
+    - firejail
 
 
 - name: install vlc
   pacman: name=vlc state=present
+  tags:
+    - vlc
 
 - name: Jail vlc
   file: src=/usr/bin/firejail
         dest=/usr/local/bin/vlc
         state=link
   tags:
+    - vlc
     - firejail
 
 - name: install prusa-slicer
   pacman: name=prusa-slicer state=present
+  tags:
+    - prusa-slicer
+
+- name: Jail prusa-slicer
+  file: src=/usr/bin/firejail
+        dest=/usr/local/bin/prusa-slicer
+        state=link
+  tags:
+    - prusa-slicer
+    - firejail
+
 
 - name: install usbutils
   pacman: name=usbutils state=present
@@ -61,6 +80,15 @@
 
 - name: install unzip
   pacman: name=unzip state=present
+
+- name: Jail unzip
+  file: src=/usr/bin/firejail
+        dest=/usr/local/bin/unzip
+        state=link
+  tags:
+    - unzip
+    - firejail
+
 
 - name: install peek (screen gif recorder)
   pacman: name=peek state=present
