@@ -45,11 +45,11 @@
     owner: "{{ user.name }}"
     group: "{{ user.group }}"
 
-- name: Push i3status.toml (frustration)
+- name: Push i3status.toml (grim)
   copy:
-    src: "frustration_i3status_config"
+    src: "grim_i3status_config"
     dest: "/home/{{ user.name }}/.i3/i3status.toml"
-  when: machine == "frustration"
+  when: machine == "grim"
 
 - name: Push i3status.toml (doom)
   copy:

@@ -1,4 +1,4 @@
-export MACHINE_NAME=frustration
+export MACHINE_NAME=grim
 
 if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
     exec startx

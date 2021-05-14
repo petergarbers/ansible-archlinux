@@ -28,17 +28,17 @@
     dest: "/usr/share/oh-my-zsh/themes/agnoster.zsh-theme"
   when: omzinstall is changed
 
-- name: Push zshenv (frustration)
+- name: Push zshenv (grim)
   copy:
-    src: "frustration_zshenv"
+    src: "grim_zshenv"
     dest: "/home/{{ user.name }}/.zshenv"
-  when: machine == "frustration"
+  when: machine == "grim"
 
-- name: Push zprofile (frustration)
+- name: Push zprofile (grim)
   copy:
-    src: "frustration_zprofile"
+    src: "grim_zprofile"
     dest: "/home/{{ user.name }}/.zprofile"
-  when: machine == "frustration"
+  when: machine == "grim"
 
 
 - name: Push zprofile (doom)
