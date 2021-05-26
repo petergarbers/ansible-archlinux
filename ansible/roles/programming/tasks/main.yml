@@ -1,11 +1,11 @@
 ---
 
 - import_tasks: asdf.yml
-# - import_tasks: java.yml
-# - import_tasks: clojure.yml
+- import_tasks: java.yml
+- import_tasks: clojure.yml
 - import_tasks: docker.yml
-# - import_tasks: rust.yml
-# - import_tasks: ti.yml
+- import_tasks: rust.yml
+- import_tasks: ti.yml
 - import_tasks: kube.yml
 - import_tasks: tools.yml
-#- import_tasks: nodejs.yml
+- import_tasks: nodejs.yml

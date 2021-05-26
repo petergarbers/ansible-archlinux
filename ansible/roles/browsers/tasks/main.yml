@@ -39,7 +39,7 @@
     - firefox
     - firejail
 
-- name: Allow u2f in browsers to mak security tokens work
+- name: Allow u2f in browsers to make security tokens work
   lineinfile:
     dest: /etc/firejail/firejail.config
     regexp: "^# browser-disable-u2f yes"
